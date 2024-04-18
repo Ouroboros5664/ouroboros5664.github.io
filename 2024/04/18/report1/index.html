@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+  
+  <title>静态网页博客总结 | MyBlog</title>
+  
+  <meta name="author" content="Ouroboros" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="实验报告" />
+  
+  <meta name="description" content="博客主题及其选取原因博客主题：Kratos-Rebirth选取原因：  功能全面：包含了首页、文章列表、文章详情功能，且能根据文章所属分类和标签展示文章，“关于”页面可以仿照着自己实现 UI清晰：整个页面功能块分布明确，UI设计符合用户的习惯和直觉，界面元素应该易于识别和操作，且具备一定的美观性 使用指南较为完善：项目给出了较为完整的使用指南，更便于上手  博客页面布局及其设计思路首页首页由顶部导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="静态网页博客总结">
+<meta property="og:url" content="http://ouroboros5664.github.io/2024/04/18/report1/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="博客主题及其选取原因博客主题：Kratos-Rebirth选取原因：  功能全面：包含了首页、文章列表、文章详情功能，且能根据文章所属分类和标签展示文章，“关于”页面可以仿照着自己实现 UI清晰：整个页面功能块分布明确，UI设计符合用户的习惯和直觉，界面元素应该易于识别和操作，且具备一定的美观性 使用指南较为完善：项目给出了较为完整的使用指南，更便于上手  博客页面布局及其设计思路首页首页由顶部导">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ouroboros5664.github.io/2024/04/18/report1/images/thumb/thumb_6.webp">
+<meta property="article:published_time" content="2024-04-18T09:51:25.258Z">
+<meta property="article:modified_time" content="2024-04-17T13:41:14.594Z">
+<meta property="article:author" content="Ouroboros">
+<meta property="article:tag" content="实验报告">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ouroboros5664.github.io/2024/04/18/report1/images/thumb/thumb_6.webp">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" media="all"></script>
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" media="(prefers-color-scheme: dark)"></script>
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" media="all"></script>
+  
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></script>
+  <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/aplayer@1.10.1/dist/APlayer.min.css"></script>
+  
+  
+    <link rel="stylesheet" href="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"></script>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="/vendors/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="/vendors/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+    
+  </style>
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li>
+                                            
+                                                <a href="/">
+                                            
+                                                
+                                                    <i class="fa fa-home"></i>
+                                                
+                                                首页
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="/archives/">
+                                            
+                                                
+                                                    <i class="fa fa-file"></i>
+                                                
+                                                档案馆
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="/about/">
+                                            
+                                                
+                                                    <i class="fa fa-user"></i>
+                                                
+                                                关于我
+                                            </a>
+                                            
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">MyBlog</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>MyBlog</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="http://ouroboros5664.github.io/2024/04/18/report1/">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">静态网页博客总结</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2024-04-18T09:51:25.258Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-04-18</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">Ouroboros</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~2.13K
+                        
+                        字
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1713361274594"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E5%8F%8A%E5%85%B6%E9%80%89%E5%8F%96%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">博客主题及其选取原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%8F%8A%E5%85%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">博客页面布局及其设计思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-number">2.1.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E6%83%85%E9%A1%B5"><span class="toc-number">2.2.</span> <span class="toc-text">博客详情页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%85%B6%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9"><span class="toc-number">3.</span> <span class="toc-text">博客功能实现及其技术选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B"><span class="toc-number">3.1.</span> <span class="toc-text">配置过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%BF%87%E7%A8%8B"><span class="toc-number">3.2.</span> <span class="toc-text">修改过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.1.</span> <span class="toc-text">主题配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E4%BF%AE%E6%94%B9"><span class="toc-number">3.2.2.</span> <span class="toc-text">内容修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">新建博客文章</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%9B%BF%E6%8D%A2"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">图片替换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#about%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.2.2.3.</span> <span class="toc-text">about页面的实现</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">博客制作过程中遇到的问题及其解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#about%E9%A1%B5%E9%9D%A2%E7%9A%84%E4%B9%A6%E5%86%99"><span class="toc-number">4.1.</span> <span class="toc-text">about页面的书写</span></a></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h2 id="博客主题及其选取原因"><a href="#博客主题及其选取原因" class="headerlink" title="博客主题及其选取原因"></a>博客主题及其选取原因</h2><p>博客主题：<a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth/tree/master">Kratos-Rebirth</a><br><img src="/images/theme-demo.png" alt="博客主题演示"><br>选取原因：</p>
+<ul>
+<li>功能全面：包含了首页、文章列表、文章详情功能，且能根据文章所属分类和标签展示文章，“关于”页面可以仿照着自己实现</li>
+<li>UI清晰：整个页面功能块分布明确，UI设计符合用户的习惯和直觉，界面元素应该易于识别和操作，且具备一定的美观性</li>
+<li>使用指南较为完善：项目给出了较为完整的<a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth/blob/master/Kratos-Rebirth-Manual.md">使用指南</a>，更便于上手</li>
+</ul>
+<h2 id="博客页面布局及其设计思路"><a href="#博客页面布局及其设计思路" class="headerlink" title="博客页面布局及其设计思路"></a>博客页面布局及其设计思路</h2><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>首页由顶部导航栏、顶部横幅、博客列表、汇总信息组成，左下角有音乐播放器，右下角有搜索功能和light&#x2F;night切换等功能，下滑后还有回到顶部功能。修改后的博客页面基本保留了原有样式，在原基础上增添了“关于”页面，给出了博客作者的相关信息，删除了不需要的“好伙伴”页面和“链接”页面，除此之外对全部图片进行了替换，并且增加了一些博客来充实整体。<br><img src="/images/blogpage.png" alt="当前博客首页"></p>
+<h3 id="博客详情页"><a href="#博客详情页" class="headerlink" title="博客详情页"></a>博客详情页</h3><p>博客详情页与首页大致相同，不同之处在于博客列表区域被替换为了博客详情页，右侧的汇总信息增加了当前博客的目录结构，目录结构也可选择不显示。<br><img src="/images/blogdetail.png" alt="博客详情页"></p>
+<h2 id="博客功能实现及其技术选择"><a href="#博客功能实现及其技术选择" class="headerlink" title="博客功能实现及其技术选择"></a>博客功能实现及其技术选择</h2><h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>博客选择使用hexo框架实现，在安装完所需工具后，使用如下命令安装脚手架工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>新建一个hexo项目，命名为myblog：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure>
+<p>进入myblog文件夹，安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myblog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h3 id="修改过程"><a href="#修改过程" class="headerlink" title="修改过程"></a>修改过程</h3><h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>将选择的主题kratos-rebirth通过git clone命令拉到myblog&#x2F;theme文件夹中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> theme</span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:Candinya/Kratos-Rebirth.git</span><br></pre></td></tr></table></figure>
+<p>编辑_config.yml，修改title、language、theme等信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: MyBlog</span><br><span class="line">author: Ouroboros</span><br><span class="line">language: zh-CN</span><br><span class="line">theme: kratos-rebirth</span><br></pre></td></tr></table></figure>
+<p>复制主题中的_config.html到myblog目录下，并重命名为_config.kratos.rebirth.yml，并修改导航栏如下，并且注释掉不需要的功能（如friends部分）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">topMenu:</span><br><span class="line">  - label: 首页</span><br><span class="line">    icon: home</span><br><span class="line">    url: /</span><br><span class="line">  - label: 档案馆</span><br><span class="line">    icon: file</span><br><span class="line">    url: /archives/</span><br><span class="line">  - label: 关于我</span><br><span class="line">    icon: user</span><br><span class="line">    url: /about/</span><br></pre></td></tr></table></figure>
+<h4 id="内容修改"><a href="#内容修改" class="headerlink" title="内容修改"></a>内容修改</h4><h5 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h5><ol>
+<li>在myblog&#x2F;source&#x2F;_posts目录下新建md文件，作为博客文章</li>
+<li>编辑博客文章的头部信息，title为文章标题，categories为文章分类，tags为文章标签，sticky为文章权重，值越大文章排序越靠前，pic指定首页下文章对应的图片，comments为评论功能，当前已关闭，only指示了当前页面在首页、分类、标签下是否显示<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 静态网页博客总结</span><br><span class="line">categories: 开源软件开发与社区治理</span><br><span class="line">tags:</span><br><span class="line">- 实验报告</span><br><span class="line">sticky: 100 <span class="comment"># 置顶</span></span><br><span class="line">pic: /images/thumb/thumb_5.webp</span><br><span class="line">comments: flase</span><br><span class="line">toc: flase</span><br><span class="line">only:</span><br><span class="line">- home</span><br><span class="line">- category</span><br><span class="line">- tag</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="图片替换"><a href="#图片替换" class="headerlink" title="图片替换"></a>图片替换</h5><ul>
+<li>images&#x2F;thumb文件夹下的图片为文章对应的各个图片</li>
+<li>images文件夹下：<ul>
+<li>about.webp为右侧边栏头像上方的背景图</li>
+<li>avatar.webp为头像图片</li>
+<li>banner.webp为light模式下的横幅图片</li>
+<li>banner_dark.webp为night模式下的横幅图片</li>
+<li>bg.webp为light模式下的背景图片</li>
+<li>bg_dark.webp为night模式下的背景图片<br>将上述图片全部替换为自己的即可</li>
+</ul>
+</li>
+</ul>
+<h5 id="about页面的实现"><a href="#about页面的实现" class="headerlink" title="about页面的实现"></a>about页面的实现</h5><p>在_config.kratos.rebirth.yml中，已经配置了about页面的url：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">topMenu:</span><br><span class="line">  - label: 首页</span><br><span class="line">    icon: home</span><br><span class="line">    url: /</span><br><span class="line">  - label: 档案馆</span><br><span class="line">    icon: file</span><br><span class="line">    url: /archives/</span><br><span class="line">  - label: 关于我</span><br><span class="line">    icon: user</span><br><span class="line">    url: /about/</span><br></pre></td></tr></table></figure>
+<p>只需在source文件夹下新增about页面，并新增一个markdown文件，作为关于我的页面的实现</p>
+<h2 id="博客制作过程中遇到的问题及其解决方法"><a href="#博客制作过程中遇到的问题及其解决方法" class="headerlink" title="博客制作过程中遇到的问题及其解决方法"></a>博客制作过程中遇到的问题及其解决方法</h2><h3 id="about页面的书写"><a href="#about页面的书写" class="headerlink" title="about页面的书写"></a>about页面的书写</h3><ul>
+<li>图片路径应该为&#x2F;images&#x2F;thumb&#x2F;thumb_5.webp之类，而不是images&#x2F;thumb&#x2F;thumb_5.webp</li>
+<li>一开始不太清楚关于页面如何实现，后来发现要在source文件夹下新建一个about文件夹，对应了&#x2F;about&#x2F;的url</li>
+</ul>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://ouroboros5664.github.io/2024/04/18/report1/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://ouroboros5664.github.io/2024/04/18/report1/";
+            const title         = "「静态网页博客总结」";
+            const excerpt       = `博客主题及其选取原因博客主题：Kratos-Rebirth选取原因：
+
+功能全面：包含了首页、文章列表、文章详情功能，且能根据文章所属分类和标签展示文章，“关于”页面可以仿照着自己实现
+UI清晰：整个页面功能块分布明确，UI设计符合用...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" rel="tag">实验报告</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2024-04-17T13:41:14.594Z" itemprop="dateModified">最后编辑：2024-04-17</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 如何使用 Windows 系统" href="/2024/04/18/windows/">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                6
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                2
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                5
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E5%8F%8A%E5%85%B6%E9%80%89%E5%8F%96%E5%8E%9F%E5%9B%A0"><span class="toc-text">博客主题及其选取原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E5%8F%8A%E5%85%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-text">博客页面布局及其设计思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-text">首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E6%83%85%E9%A1%B5"><span class="toc-text">博客详情页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E5%8F%8A%E5%85%B6%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9"><span class="toc-text">博客功能实现及其技术选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B"><span class="toc-text">配置过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%BF%87%E7%A8%8B"><span class="toc-text">修改过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text">主题配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E4%BF%AE%E6%94%B9"><span class="toc-text">内容修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0"><span class="toc-text">新建博客文章</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%9B%BF%E6%8D%A2"><span class="toc-text">图片替换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#about%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">about页面的实现</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">博客制作过程中遇到的问题及其解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#about%E9%A1%B5%E9%9D%A2%E7%9A%84%E4%B9%A6%E5%86%99"><span class="toc-text">about页面的书写</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%8E%E7%A4%BE%E5%8C%BA%E6%B2%BB%E7%90%86/">开源软件开发与社区治理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a><span class="category-list-count">4</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" style="font-size: 0.6em;">实验报告</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.6em;">工具</a> <a href="/tags/%E5%B9%B3%E5%8F%B0/" style="font-size: 0.6em;">平台</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 0.6em;">系统</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 0.6em;">编程语言</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2024/04/18/report1/"><i class="fa  fa-book"></i> 静态网页博客总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/04/18/windows/"><i class="fa  fa-book"></i> 如何使用 Windows 系统</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/04/18/hello-world/"><i class="fa  fa-book"></i> Hello World</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/04/18/github-introduce/"><i class="fa  fa-book"></i> GitHub：程序员的社交平台</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/04/18/edge_use/"><i class="fa  fa-book"></i> 如何使用 Edge 浏览器</a>
+            
+          
+        
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        <!-- Keep for compatibility -->
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!-- New links -->
+                        
+                            <li>
+                                <a target="_blank" rel="nofollow" href="https://github.com/Candinya">
+                                    
+                                        <i class="fa fa-github"></i>
+                                    
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a target="_blank" rel="nofollow" href="https://nya.one/@Candinya">
+                                    
+                                        <svg fill="currentColor" viewBox="0 0 1024 1024"><path d="M512,0C794.58,0 1024,229.42 1024,512C1024,794.58 794.58,1024 512,1024C229.42,1024 0,794.58 0,512C0,229.42 229.42,0 512,0ZM292.789,304.042L292.789,723.567C292.789,750.225 314.432,771.868 341.091,771.868C367.749,771.868 389.393,750.225 389.393,723.567L389.393,440.596L641.699,748.461C650.156,762.483 665.536,771.868 683.091,771.868C709.749,771.868 731.393,750.225 731.393,723.567L731.393,304.042C731.393,277.384 709.749,255.74 683.091,255.74C664.98,255.74 649.184,265.729 640.916,280.494L565.431,372.601L565.452,372.618C558.836,380.884 554.877,391.367 554.877,402.768C554.877,429.426 576.521,451.07 603.179,451.07C615.262,451.07 626.315,446.624 634.789,439.28L634.789,587.625L383.634,281.165C375.473,266.033 359.474,255.74 341.091,255.74C314.432,255.74 292.789,277.384 292.789,304.042Z" /></svg>
+                                    
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a target="_blank" rel="nofollow" href="/atom.xml">
+                                    
+                                        <i class="fa fa-rss"></i>
+                                    
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 MyBlog 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by Ouroboros.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+                
+                    <div class="box group-box">
+                        <a href="https://matrix.to/#/#CandyUnion:nya.one" target="_blank" rel="nofollow">
+                            <span class="fa fa-users"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="/vendors/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="/vendors/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
